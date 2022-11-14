@@ -1,6 +1,160 @@
 *{
-    background-color: azure;
+    
     box-sizing: border-box;
     padding: 0;
     list-style: none;
+
+}
+html{
+    font-size: 18px;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ddd;
+}
+#container{
+    max-width: 1000px;
+    width: 95%;
+    margin: 0 auto;
+    min-width: 300px;
+}
+#nav{
+    background: #86b604;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#nav::after{
+    content: " ";
+    clear: both;
+    display: table;
+}
+.hamburger{
+    width: 50px;
+    border: 1px solid white;
+    border-radius: 2px;
+    padding: 10px;
+    float: right;
+    margin: 5px 5px 0 0;
+}
+.hamburger span{
+    height: 5px;
+    display: block;
+    background-color: white;
+    margin-bottom: 5px;
+}
+span:last-child{
+    margin:0;
+}
+#nav ul li{
+    border-bottom: 1px solid white;
+}
+#nav ul li a{
+    color: white;
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+}
+#nav ul li:first-child{
+    color: white;
+    padding: 20px;
+}
+#burgir{
+    display: none;
+}
+#nav ul li:not(:first-child){
+    display: none;
+}
+#burgir:checked ~  ul li:not(:first-child){
+    display: block;
+
+}
+#main{
+    margin-top: 6rem;
+}
+#main h1{
+    font-size: 5rem;
+    font-weight: 100;
+    margin: 2rem 0 2rem 0;
+}
+#main>img{
+    border-radius: 50%;
+    margin: 0 auto 2rem auto;
+    display: block;
+    width: 50%;
+}
+img{
+    width: 100%;
+}
+p{
+   line-height: 1.7; 
+
+}
+#boxok {
+    margin-top: 2rem;
+}
+.box{
+    margin-bottom: 1rem;
+    background-color: white;
+}
+h2{
+    padding: 2rem 0;
+    font-weight: 300;
+}
+
+.boxcontent{
+    padding: 1rem;
+    line-height: 1.5;
+}
+
+.boxcontent a{
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 10%;
+    text-decoration: none;
+    background-color:#86b604 ;
+    color:white;
+}
+.boxcontent a:hover{
+    background-color: orange;
+}
+@media(min-width:576px){
+    
+    #boxok{
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        gap: 1rem;
+    }
+    #boxes::after{
+        content: ' ';
+        clear: both;
+        display:table;
+    }
+
+    #boxes .box:nth-child(even){
+        margin-left: 1rem;
+    }
+
+}
+ul{
+    margin: 0;
+}
+@media(min-width:992px){
+    
+    #boxok{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+    #boxes::after{
+        content: ' ';
+        clear: both;
+        display:table;
+    }
+
+    #boxes .box:nth-child(even){
+        margin-left: 1rem;
+    }
+
 }
